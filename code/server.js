@@ -3,6 +3,7 @@ import express from 'express';
 import { login } from './services/authService.js';
 import { products, users, orders } from './mock/DBfalsa.js';
 import cors from 'cors';
+import { registerUserInDB } from './services/registerUsersService.js';
 
 const app = express();
 const PORT = 3000;
@@ -43,6 +44,18 @@ app.get('/users', (req, res) => {
 // Ruta para obtener órdenes
 app.get('/orders', (req, res) => {
   res.status(200).json(orders);
+});
+
+// Ruta para registrar usuarios
+app.post('/api/register', (req, res) => {
+    const { name, email, password } = req.body;
+
+    try {
+        const newUser = registerUserInDB(name, email, password);
+        res.status(201).json(newUser); // Respuesta con el usuario registrado
+    } catch (error) {
+        res.status(400).json({ error: error.message }); // Respuesta con el error
+    }
 });
 
 // Iniciar el servidor
