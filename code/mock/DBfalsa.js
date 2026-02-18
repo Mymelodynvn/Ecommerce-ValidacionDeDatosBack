@@ -2,7 +2,7 @@ export const users = [
   { id: 'u1', name: 'Juan Pérez', email: 'juan.perez@example.com', password: '123456' },
   { id: 'u2', name: 'María López', email: 'maria.lopez@example.com', password: 'password' },
   { id: 'u3', name: 'Carlos García', email: 'carlos.garcia@example.com', password: 'qwerty' },
-  { id: 'u4', name: 'Ana Martínez', email: 'miguel.amaya@gmail.com', password: '123456789' }
+  { id: 'u4', name: 'Ana Martínez', email: 'miguel.amaya@newinntech.com', password: '123456789' }
 ];
 // aquí se guardan los usuarios que registramos
 
