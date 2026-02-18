@@ -36,10 +36,10 @@ export function addToCart(cart, product, qty){
 export function calculateTotal(cart) {
     let subtotal = 0;
     //sumamos los precios
-    cart.items.foreach(i => {
-        subtotal+- i.price *i.qty;
+    cart.items.forEach(i => {
+        subtotal += i.price * i.qty;
     });
 
     const iva = subtotal * 0.19;
-    cart.total = + (subtotal + iva.toFixed(2));
+    cart.total = parseFloat((subtotal + iva).toFixed(2));
 }

@@ -1,0 +1,207 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Juan Pérez",
+      "email": "juan.perez@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "u2",
+      "name": "María López",
+      "email": "maria.lopez@example.com",
+      "password": "password",
+      "role": "user"
+    },
+    {
+      "id": "u3",
+      "name": "Carlos García",
+      "email": "carlos.garcia@example.com",
+      "password": "qwerty",
+      "role": "user"
+    },
+    {
+      "id": "u4",
+      "name": "Ana Martínez",
+      "email": "miguel.amaya2@newinntech.com",
+      "password": "123456789",
+      "role": "user"
+    },
+    {
+      "id": "u5",
+      "name": "Test User",
+      "email": "test@test.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "id": "u6",
+      "name": "maap1001's Org",
+      "email": "miguel.amaya@newinntech.com",
+      "password": "New@123456789",
+      "role": "user"
+    },
+    {
+      "id": "u7",
+      "name": "admin",
+      "email": "admin@admin.com",
+      "password": "admin123456789",
+      "role": "admin"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": "Torta chocolate",
+      "price": 20,
+      "stock": 50,
+      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+    },
+    {
+      "id": "p2",
+      "name": "Cupcake vainilla",
+      "price": 5,
+      "stock": 80,
+      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+    },
+    {
+      "id": "p3",
+      "name": "Brownie",
+      "price": 15,
+      "stock": 30,
+      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+    },
+    {
+      "id": "p4",
+      "name": "Galleta chispas",
+      "price": 3,
+      "stock": 20,
+      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+    },
+    {
+      "id": "p5",
+      "name": "Cheesecake",
+      "price": 25,
+      "stock": 40,
+      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+    }
+  ],
+  "orders": [
+    {
+      "id": "o1",
+      "userId": "u1",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 2,
+          "subtotal": 40
+        }
+      ],
+      "subtotal": 40,
+      "iva": 7.6,
+      "total": 47.6,
+      "date": "2026-02-17T10:30:00.000Z",
+      "status": "completed"
+    },
+    {
+      "id": "o2",
+      "userId": "u2",
+      "items": [
+        {
+          "productId": "p3",
+          "productName": "Brownie",
+          "price": 15,
+          "quantity": 1,
+          "subtotal": 15
+        }
+      ],
+      "subtotal": 15,
+      "iva": 2.85,
+      "total": 17.85,
+      "date": "2026-02-17T14:20:00.000Z",
+      "status": "completed"
+    },
+    {
+      "id": "o3",
+      "userId": "u3",
+      "items": [
+        {
+          "productId": "p2",
+          "productName": "Cupcake vainilla",
+          "price": 5,
+          "quantity": 3,
+          "subtotal": 15
+        }
+      ],
+      "subtotal": 15,
+      "iva": 2.85,
+      "total": 17.85,
+      "date": "2026-02-18T09:15:00.000Z",
+      "status": "pending"
+    },
+    {
+      "id": "o4",
+      "userId": "u6",
+      "items": [
+        {
+          "productId": "p2",
+          "productName": "Cupcake vainilla",
+          "price": 5,
+          "quantity": 1,
+          "subtotal": 5
+        },
+        {
+          "productId": "p3",
+          "productName": "Brownie",
+          "price": 15,
+          "quantity": 1,
+          "subtotal": 15
+        }
+      ],
+      "subtotal": 20,
+      "iva": 3.8,
+      "total": 23.8,
+      "date": "2026-02-18T21:13:05.872Z",
+      "status": "pending"
+    },
+    {
+      "id": "o5",
+      "userId": "u7",
+      "items": [
+        {
+          "productId": "p2",
+          "productName": "Cupcake vainilla",
+          "price": 5,
+          "quantity": 1,
+          "subtotal": 5
+        }
+      ],
+      "subtotal": 5,
+      "iva": 0.95,
+      "total": 5.95,
+      "date": "2026-02-18T21:45:55.824Z",
+      "status": "pending"
+    },
+    {
+      "id": "o6",
+      "userId": "u7",
+      "items": [
+        {
+          "productId": "p3",
+          "productName": "Brownie",
+          "price": 15,
+          "quantity": 4,
+          "subtotal": 60
+        }
+      ],
+      "subtotal": 60,
+      "iva": 11.4,
+      "total": 71.4,
+      "date": "2026-02-18T21:46:33.108Z",
+      "status": "pending"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 // Importamos productos
-import { products } from "../mock/DBfalsa.js";
+import { products, saveDB } from "../mock/DBfalsa.js";
 
 // Función para generar un ID único para productos
 function generateProductId() {
@@ -28,6 +28,7 @@ export function createProduct(name, price, stock, image = 'https://www.valoraana
 
     // Agregar a la base de datos
     products.push(newProduct);
+    saveDB();
     return newProduct;
 }
 
@@ -65,6 +66,7 @@ export function updateProduct(id, updates) {
     if (updates.stock !== undefined) product.stock = parseInt(updates.stock);
     if (updates.image !== undefined) product.image = updates.image;
 
+    saveDB();
     return product;
 }
 
@@ -76,6 +78,7 @@ export function updatePrice(id, newPrice) {
     if (!product) throw new Error('El producto no existe');
 
     product.price = parseFloat(newPrice);
+    saveDB();
     return product;
 }
 
@@ -85,5 +88,6 @@ export function deleteProduct(id) {
     if (index === -1) throw new Error('El producto no existe');
 
     const deletedProduct = products.splice(index, 1)[0];
+    saveDB();
     return deletedProduct;
 }

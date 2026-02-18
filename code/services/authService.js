@@ -20,5 +20,5 @@ export function login(email, password) {
     }
 
     // Retornar el usuario sin la contraseña
-    return { id: user.id, name: user.name, email: user.email };
+    return { id: user.id, name: user.name, email: user.email, role: user.role };
 }
