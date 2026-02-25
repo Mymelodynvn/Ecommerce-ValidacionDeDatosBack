@@ -6,8 +6,9 @@ import cors from 'cors';
 import { registerUserInDB, getAllUsers, getUserById } from './services/registerUsersService.js';
 import { createProduct, getAllProducts, getProductById, updateProduct, deleteProduct } from './services/productService.js';
 import { createOrder, getAllOrders, getOrdersByUserId, getOrderById } from './services/orderService.js';
-import { getVentasDelDia, getProductosStockBajo, getReporteMensual, getTendenciaVentas, getKPIs, getProductosMasVendidos } from './services/dashboardService.js';
+import { getVentasDelDia, getProductosStockBajo, getReporteMensual, getTendenciaVentas, getKPIs, getProductosMasVendidos, getReporteSemanal, getReportePorRango } from './services/dashboardService.js';
 import { requireAdmin } from './middleware/authMiddleware.js';
+import { addToCart, createCart } from './services/cartService.js';
 
 const app = express();
 const PORT = 3000;
@@ -38,6 +39,40 @@ app.post('/login', (req, res) => {
 // Ruta para obtener órdenes (deprecated - usar /api/orders)
 app.get('/orders', (req, res) => {
   res.status(200).json(orders);
+});
+
+// ========== RUTAS DE CARRITO ==========
+
+// Validar disponibilidad de producto para agregar al carrito
+app.post('/api/cart/validate', (req, res) => {
+    const { productId, quantity, currentCartItems } = req.body;
+
+    try {
+        // Crear un carrito temporal con los items actuales
+        const tempCart = createCart();
+        
+        // Agregar items actuales del carrito
+        if (currentCartItems && currentCartItems.length > 0) {
+            currentCartItems.forEach(item => {
+                tempCart.items.push(item);
+            });
+        }
+        
+        // Intentar agregar el nuevo producto
+        const product = getProductById(productId);
+        addToCart(tempCart, product, quantity);
+        
+        res.status(200).json({ 
+            available: true, 
+            message: 'Producto disponible',
+            stock: product.stock
+        });
+    } catch (error) {
+        res.status(400).json({ 
+            available: false, 
+            error: error.message 
+        });
+    }
 });
 
 // ========== RUTAS DE ÓRDENES ==========
@@ -255,6 +290,30 @@ app.get('/api/dashboard/productos-mas-vendidos', requireAdmin, (req, res) => {
         res.status(200).json(productos);
     } catch (error) {
         res.status(500).json({ error: error.message });
+    }
+});
+
+// Obtener reporte semanal
+app.get('/api/dashboard/reporte-semanal', requireAdmin, (req, res) => {
+    const { fechaInicio } = req.query;
+    
+    try {
+        const reporte = getReporteSemanal(fechaInicio);
+        res.status(200).json(reporte);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+// Obtener reporte por rango de fechas
+app.get('/api/dashboard/reporte-rango', requireAdmin, (req, res) => {
+    const { fechaInicio, fechaFin } = req.query;
+    
+    try {
+        const reporte = getReportePorRango(fechaInicio, fechaFin);
+        res.status(200).json(reporte);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
     }
 });
 

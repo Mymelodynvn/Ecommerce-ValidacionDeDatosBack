@@ -48,6 +48,125 @@
       "email": "admin@admin.com",
       "password": "admin123456789",
       "role": "admin"
+    },
+    {
+      "id": "u8",
+      "name": "Kei",
+      "email": "keiberli2002@gmail.com",
+      "password": "Mercado#12",
+      "role": "admin"
+    },
+    {
+      "id": "u9",
+      "name": "Javier",
+      "email": "javier@gmail.com",
+      "password": "  Javier2026$",
+      "role": "user"
+    },
+    {
+      "id": "u10",
+      "name": "Javier",
+      "email": "montoya.javier@gmail.com",
+      "password": "Javier2026$",
+      "role": "user"
+    },
+    {
+      "id": "u11",
+      "name": "montoya",
+      "email": "montoya@gmail.com",
+      "password": "javier2026$",
+      "role": "user"
+    },
+    {
+      "id": "u12",
+      "name": "Kei",
+      "email": "adfd@gmail",
+      "password": "123456789*",
+      "role": "user"
+    },
+    {
+      "id": "u13",
+      "name": "Genovessa",
+      "email": "vasgdjka@gmail.com",
+      "password": "123456789*",
+      "role": "user"
+    },
+    {
+      "id": "u14",
+      "name": "1234r5t6y7u",
+      "email": "12345t@gmail.com",
+      "password": "        1  +.",
+      "role": "user"
+    },
+    {
+      "id": "u15",
+      "name": "Kei",
+      "email": "keib@gmail.com",
+      "password": "asdfghjk12345+.",
+      "role": "user"
+    },
+    {
+      "id": "u16",
+      "name": "Cupcakevainilla",
+      "email": "k002@gmail.com",
+      "password": "12345689.",
+      "role": "user"
+    },
+    {
+      "id": "u17",
+      "name": "Kei",
+      "email": "kei2@gmail.com",
+      "password": "123456789.",
+      "role": "user"
+    },
+    {
+      "id": "u18",
+      "name": "Tortachocolate",
+      "email": "keiberli22@gmail.com",
+      "password": "234567890.",
+      "role": "user"
+    },
+    {
+      "id": "u19",
+      "name": "Kei",
+      "email": "keibe@gmail.com",
+      "password": "qwertyuiop1.",
+      "role": "user"
+    },
+    {
+      "id": "u20",
+      "name": "Kei",
+      "email": "keiberli2.com",
+      "password": "1234567890sdfghj.",
+      "role": "user"
+    },
+    {
+      "id": "u21",
+      "name": "Kei",
+      "email": "keiberli2@.com",
+      "password": "123456789.",
+      "role": "user"
+    },
+    {
+      "id": "u22",
+      "name": "Kei",
+      "email": "keib2ai@outlook.com",
+      "password": "123456789.",
+      "role": "user"
+    },
+    {
+      "id": "u23",
+      "name": "Kei",
+      "email": "ke123ib@gmail.com",
+      "password": "123456789<",
+      "role": "user"
+    },
+    {
+      "id": "u24",
+      "name": "Kei",
+      "email": "keiberli23456y2@gmail.com",
+      "password": "123456789.Mn",
+      "role": "user"
     }
   ],
   "products": [
@@ -55,36 +174,50 @@
       "id": "p1",
       "name": "Torta chocolate",
       "price": 20,
-      "stock": 50,
-      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+      "stock": 0,
+      "image": "https://www.recetasnestle.com.ve/sites/default/files/srh_recipes/e2928ff551a360cdadb4e5a2528841b7.jpg"
     },
     {
       "id": "p2",
       "name": "Cupcake vainilla",
       "price": 5,
-      "stock": 80,
-      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+      "stock": 79,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW6K47vsYeu3loAAYI1-OVyrLIoz0nhXe3mQ&s"
     },
     {
       "id": "p3",
       "name": "Brownie",
       "price": 15,
-      "stock": 30,
-      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+      "stock": 29,
+      "image": "https://alicante.com.ar/wp-content/uploads/2022/06/jpeg-optimizer_iStock-1130692246.jpg"
     },
     {
       "id": "p4",
       "name": "Galleta chispas",
       "price": 3,
       "stock": 20,
-      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR67Ej6g3mZQHalSQEjKfB8aW6cTgvR58NcVA&s"
     },
     {
       "id": "p5",
       "name": "Cheesecake",
       "price": 25,
       "stock": 40,
-      "image": "https://www.valoraanalitik.com/wp-content/uploads/2025/05/De-Todito.jpg"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxIcG_vm6lqT-QYO1_rP_Qvj6dbLkLyffYbA&s"
+    },
+    {
+      "id": "p6",
+      "name": "Mini Donas",
+      "price": 5,
+      "stock": 0,
+      "image": "https://i.pinimg.com/236x/25/a7/88/25a788baa10e17441110ada118cbec3e.jpg"
+    },
+    {
+      "id": "p7",
+      "name": "Genovessa",
+      "price": 20,
+      "stock": 0,
+      "image": "data:image/jpeg;base64,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"
     }
   ],
   "orders": [
@@ -202,6 +335,233 @@
       "total": 71.4,
       "date": "2026-02-18T21:46:33.108Z",
       "status": "pending"
+    },
+    {
+      "id": "o7",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 2,
+          "subtotal": 40
+        }
+      ],
+      "subtotal": 40,
+      "iva": 7.6,
+      "total": 47.6,
+      "date": "2026-02-18T23:21:55.641Z",
+      "status": "pending"
+    },
+    {
+      "id": "o8",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p7",
+          "productName": "Genovessa",
+          "price": 20,
+          "quantity": 2,
+          "subtotal": 40
+        },
+        {
+          "productId": "p6",
+          "productName": "Mini Donas",
+          "price": 5,
+          "quantity": 1,
+          "subtotal": 5
+        },
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 2,
+          "subtotal": 40
+        }
+      ],
+      "subtotal": 85,
+      "iva": 16.15,
+      "total": 101.15,
+      "date": "2026-02-19T00:08:36.218Z",
+      "status": "pending"
+    },
+    {
+      "id": "o9",
+      "userId": "u10",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 1,
+          "subtotal": 20
+        },
+        {
+          "productId": "p3",
+          "productName": "Brownie",
+          "price": 15,
+          "quantity": 1,
+          "subtotal": 15
+        }
+      ],
+      "subtotal": 35,
+      "iva": 6.65,
+      "total": 41.65,
+      "date": "2026-02-19T00:21:12.034Z",
+      "status": "pending"
+    },
+    {
+      "id": "o10",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 1,
+          "subtotal": 20
+        },
+        {
+          "productId": "p2",
+          "productName": "Cupcake vainilla",
+          "price": 5,
+          "quantity": 1,
+          "subtotal": 5
+        }
+      ],
+      "subtotal": 25,
+      "iva": 4.75,
+      "total": 29.75,
+      "date": "2026-02-25T01:06:57.136Z",
+      "status": "pending"
+    },
+    {
+      "id": "o11",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p7",
+          "productName": "Genovessa",
+          "price": 20,
+          "quantity": 4,
+          "subtotal": 80,
+          "status": "completed"
+        }
+      ],
+      "subtotal": 80,
+      "iva": 15.2,
+      "total": 95.2,
+      "date": "2026-02-25T01:09:10.788Z",
+      "status": "pending"
+    },
+    {
+      "id": "o12",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p6",
+          "productName": "Mini Donas",
+          "price": 5,
+          "quantity": 9,
+          "subtotal": 45
+        }
+      ],
+      "subtotal": 45,
+      "iva": 8.55,
+      "total": 53.55,
+      "date": "2026-02-25T01:32:51.280Z",
+      "status": "pending"
+    },
+    {
+      "id": "o13",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 4,
+          "subtotal": 80
+        }
+      ],
+      "subtotal": 80,
+      "iva": 15.2,
+      "total": 95.2,
+      "date": "2026-02-25T01:42:26.414Z",
+      "status": "pending"
+    },
+    {
+      "id": "o14",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 5,
+          "subtotal": 100
+        }
+      ],
+      "subtotal": 100,
+      "iva": 19,
+      "total": 119,
+      "date": "2026-02-25T01:43:26.704Z",
+      "status": "pending"
+    },
+    {
+      "id": "o15",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 3,
+          "subtotal": 60
+        }
+      ],
+      "subtotal": 60,
+      "iva": 11.4,
+      "total": 71.4,
+      "date": "2026-02-25T01:44:14.987Z",
+      "status": "pending"
+    },
+    {
+      "id": "o16",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 22,
+          "subtotal": 440
+        }
+      ],
+      "subtotal": 440,
+      "iva": 83.6,
+      "total": 523.6,
+      "date": "2026-02-25T01:44:52.744Z",
+      "status": "pending"
+    },
+    {
+      "id": "o17",
+      "userId": "u8",
+      "items": [
+        {
+          "productId": "p1",
+          "productName": "Torta chocolate",
+          "price": 20,
+          "quantity": 10,
+          "subtotal": 200
+        }
+      ],
+      "subtotal": 200,
+      "iva": 38,
+      "total": 238,
+      "date": "2026-02-25T02:02:11.162Z",
+      "status": "completed"
     }
   ]
 }

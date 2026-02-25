@@ -1,3 +1,5 @@
+import { getProductById } from './productService.js';
+
 //para iniciar el carrirto (vacio)
 export function createCart(){
     return{
@@ -12,22 +14,30 @@ export function addToCart(cart, product, qty){
     //validamos que la cantidad no sea negativa
     if (qty <=0) throw new Error('Cantidad inválida');
     
+    // Obtener el producto actualizado de la base de datos para verificar stock real
+    const productoDB = getProductById(product.id);
+    
+    if (!productoDB) {
+        throw new Error('Producto no encontrado');
+    }
+    
     //validamos si ya existe en el carrito
     const existing = cart.items.find(i => i.id === product.id);
 
     //calculamos la cantidad final deseada
     const desired = (existing ? existing.qty : 0) + qty;
     
-    //validamos stock
-    if (desired > product.stock) {
-        throw new Error ('Stock insuficiente');
+    //validamos stock contra el stock real de la base de datos
+    if (desired > productoDB.stock) {
+        throw new Error(`Stock insuficiente. Solo hay ${productoDB.stock} unidades disponibles`);
     }
+    
     //si ya existe, lo sumamos
     if (existing){
         existing.qty += qty;
     }else {
-        //si no, lo agregamos
-        cart.items.push({...product,qty});
+        //si no, lo agregamos con los datos actualizados del producto
+        cart.items.push({...productoDB, qty});
     }
     //recalculamos el total
     calculateTotal(cart);

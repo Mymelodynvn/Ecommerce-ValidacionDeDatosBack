@@ -36,9 +36,6 @@ export function createOrder(userId, cartItems) {
             throw new Error(`Stock insuficiente para ${product.name}`);
         }
 
-        // Reducir stock
-        product.stock -= item.qty;
-        
         // Calcular subtotal del item
         const itemTotal = product.price * item.qty;
         total += itemTotal;
@@ -50,6 +47,12 @@ export function createOrder(userId, cartItems) {
             quantity: item.qty,
             subtotal: itemTotal
         });
+    }
+
+    // Reducir stock de todos los productos después de validar
+    for (const item of cartItems) {
+        const product = products.find(p => p.id === item.id);
+        product.stock -= item.qty;
     }
 
     // Calcular IVA
@@ -65,7 +68,7 @@ export function createOrder(userId, cartItems) {
         iva: parseFloat(iva.toFixed(2)),
         total: totalWithIva,
         date: new Date().toISOString(),
-        status: 'pending'
+        status: 'completed'
     };
 
     orders.push(newOrder);
